@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddAuthor(name="addauthor",method="post",action="/addauthor") 
+      input#inputAuthorName(type="text", placeholder="authorname", name="authorname")
+      input#inputAuthorAction(type="text", placeholder="authoraction", name="authoraction")
+      input#inputAuthorObject(type="text", placeholder="authorobject", name="authorobject")
+      button#btnSubmit(type="submit") submit

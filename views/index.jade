@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our topic sentence idea generator!
+
+    // Wrapper
+    #wrapper
+
+        // AUTHOR INFO
+        #authorInfo
+            h2 Author Info
+            p
+                strong Author:
+                |  <span id='authorInfoName'></span>
+                br
+                strong Action:
+                |  <span id='authorInfoAction'></span>
+                br
+                strong Object:
+                |  <span id='authorInfoObject'></span>
+        // /AUTHOR INFO 
+                
+        // AUTHOR LIST
+        h2 Author List
+        #authorList
+            table
+                thead
+                    th AuthorName
+                    th Delete?
+                tbody
+        // /AUTHOR LIST
+
+        // ADD AUTHOR
+        h2 Add Author
+        #addAuthor
+            fieldset
+                input#inputAuthorName(type='text', placeholder='Author Name')
+                br
+                input#inputAuthorAction(type='text', placeholder='Action')
+                br
+                input#inputAuthorObject(type='text', placeholder='Represented Object')
+                br
+                button#btnAddAuthor Add Author
+        // /ADD AUTHOR
+    // /WRAPPER

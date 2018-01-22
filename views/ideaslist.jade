@@ -1,0 +1,10 @@
+extends layout
+
+block content
+   h1.
+       Ideas List
+   ul
+       each idea, i in ideaslist
+           li
+               a(href="output:#{idea.action}")= idea.author     
+  
